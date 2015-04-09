@@ -1,0 +1,38 @@
+extends header
+
+block content
+    script.
+        var newUser = !{JSON.stringify(newUser)};
+    #wrapper
+        .container-fluid
+            .header
+                .row
+                    .col-xs-2.col-xs-offset-2
+                        #users-count.bg-success
+                            | Users in the room
+                            strong= ' ' + newUser.room
+                            = ': '
+                            span
+                    .col-xs-4
+                        #user-name.row
+                            .bg-info
+                                | Your name:
+                                strong= ' ' + newUser.name
+            .body
+                .row
+                    #users.col-xs-2.col-xs-offset-2.text-primary
+                        ul
+                    #content.col-xs-4.col-xs-offset-4
+                        #messages
+                        #typing
+                            .bg-info.message
+            .footer
+                .row
+                    .col-xs-4.col-xs-offset-4
+                        form#form-messages.modal-dialog.modal-sm(role='form', action='')
+                            .form-group
+                                input#message.form-control(type='text', autocomplete='off', placeholder='Type your message..')
+                            button.btn.btn-success(type='submit') Send
+    script(src='https://cdn.socket.io/socket.io-1.2.0.js')
+    script(src='https://code.jquery.com/jquery-1.11.1.js')
+    script(src='../js/chat.js')

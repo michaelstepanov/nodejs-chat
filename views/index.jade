@@ -1,0 +1,59 @@
+extends header
+
+block content
+    script.
+        var status = !{JSON.stringify(status)};
+    #form-sign-in.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+        .modal-dialog.modal-sm
+            .modal-content
+                div
+                    form(role='form', action='chat', method='post')
+                        .modal-header
+                            h4.modal-title Enter the chat
+                        .modal-body
+                            #status
+                            .form-group
+                                label.control-label(for='name')
+                                    | Name
+                                    span.star *
+                                    | :
+                                input#name.form-control(type='text', name='name', value='')
+                            #user-exist-alert.form-group
+                                .alert.alert-danger(role='alert') User with this name already exist in the room. Choose another name.
+                            .form-group
+                                .radio
+                                    label
+                                        input#radio-create-new-room(type='radio', name='is-new-room', value='true', data-rel='create-new-room', checked='checked')
+                                        |                                             Create new room
+                                .radio
+                                    label
+                                        input#radio-join-existed-room(type='radio', name='is-new-room', value='false', data-rel='join-existed-room')
+                                        |                                             Join existed room
+                            #create-new-room.form-group.variant
+                                .form-group
+                                    label.control-label(for='new-room')
+                                        | Room name
+                                        span.star *
+                                        | :
+                                    input#new-room.form-control.room(type='text', name='room', value='')
+                                #room-exist-alert.form-group
+                                    .alert.alert-danger(role='alert') The room already exist. Set another room name.
+                                .form-group
+                                    label.control-label(for='new-keyword') Keyword:
+                                    input#new-keyword.form-control(type='text', name='new-keyword', value='')
+                            #join-existed-room.variant
+                                #rooms-exist
+                                    .form-group
+                                        label.control-label(for='existed-room') Existed rooms:
+                                        select#existed-room.form-control.room
+                                    .form-group
+                                        label.control-label(for='keyword') Keyword:
+                                        input#keyword.form-control(type='text', name='keyword', value='')
+                                #rooms-not-exist.alert.alert-warning
+                                    | There are no existed rooms.
+                        .modal-footer
+                            button.btn.btn-primary(type='', disabled='') Set
+    script(src='https://cdn.socket.io/socket.io-1.2.0.js')
+    script(src='https://code.jquery.com/jquery-1.11.1.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')
+    script(src='../js/index.js')

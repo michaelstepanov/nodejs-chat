@@ -1,0 +1,40 @@
+body { font-family: Lato, Helvetica, Arial, sans-serif; }
+ul { list-style-type: none; margin: 0; padding: 0; }
+ul li { padding: 5px 10px; }
+ul li:nth-child(odd) { background: #eee; }
+blockquote { border-color: #337ab7; padding: 5px 10px; margin: 5px 0; }
+blockquote p { background-color: #337ab7; padding: 10px; border-radius: 7px; color: #ffffff; }
+blockquote small:before { content: ''; }
+blockquote small:after { content: ':'; }
+.row { margin: 0; }
+.time { font-size: 10px; color: gray; float: right; margin-top: 15px; padding: 0; text-align: center; }
+.star { color: #a94442; font-size: 16px; }
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 { padding: 0; }
+.message { border-radius: 3px; }
+.note-time { margin-top: 3px; }
+.footer h4 { font-weight: bold; text-transform: uppercase; line-height: 1.25; }
+.body > div { overflow-y: auto; overflow-x: hidden; margin-top: 39px; }
+.text-default { color: #3d3935; }
+.message-user { color: gray; }
+.container-fluid { padding: 0; }
+.disconnect, .connect { margin: 5px 0; }
+.blockquote-reverse { border-color: #d9edf7; }
+.blockquote-reverse p { background-color: #d9edf7; padding: 10px; border-radius: 7px; color: #000000; }
+.blockquote-reverse small:after { content: ':'; }
+#users { z-index: -1; position: fixed; }
+#status { display: none; }
+#typing { margin: 0 0 100px 0; }
+#content { padding: 0; }
+#messages { margin: 0 5px; }
+#user-name { position: fixed; z-index: 100; width: inherit; color: #000000; }
+#user-name div { padding: 10px; }
+#user-name strong { color: #337ab7; }
+#users-count { padding: 10px; color: #000000; position: fixed; width: inherit; }
+#users-count strong { color: #337ab7; }
+#form-messages { position: fixed; width: inherit; }
+#form-messages { bottom: 0; margin: 30px 0 0 0; padding: 10px 0 10px 0; background: #ffffff; }
+#join-existed-room { display: none; }
+#typing > div { display: none; }
+#form-messages .form-group { margin-bottom: 10px; }
+#typing > div, .disconnect, .connect { padding: 10px; }
+#room-exist-alert, #user-exist-alert { display: none; }
