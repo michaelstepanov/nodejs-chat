@@ -7,20 +7,15 @@
   <li>express</li>
   <li>body-parser</li>
   <li>jade</li>
-</ul>
-
-and
-
-<ul>
   <li>bootstrap</li>
   <li>jquery</li>
 </ul>
 
-## How to install:
+## How to install
     
 	npm install
 	
-## How to run:
+## How to run
 
 	node app
 	
