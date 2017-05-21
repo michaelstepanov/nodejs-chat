@@ -25,7 +25,7 @@ After running go to this address:
 
 ## Live demo
 
-	https://warm-thicket-5913.herokuapp.com/
+https://warm-thicket-5913.herokuapp.com/
 	
 ## Note
 
